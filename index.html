@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Video Player</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-  <style type="text/css">
+  <style>
     .player-button {
-      font-size: 120%;
+      font-size: 125%;
       width: 30px;
-      height: 34px;
+      height: 40px;
       border: none;
       cursor: pointer;
       color: white;
@@ -69,6 +72,7 @@
     .js-progress-slider {
       border-radius: 10px;
       height: 5px;
+      background-color: red;
     }
 
     .dot {
@@ -102,8 +106,6 @@
     }
 
   </style>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -129,9 +131,9 @@
           <span class="js-current-time"></span>
         </div>
         <div class="js-progress">
-          <div class="js-progress-slider" style="background-color: red;"></div>
+          <div class="js-progress-slider"></div>
           <span class="dot"></span>
-        </div>  
+        </div>
         <div class="duration">
           <span class="player-time js-duration"></span>
         </div>
@@ -140,12 +142,13 @@
         <i class="fa fa-expand" aria-hidden="true"></i>
       </button>
     </div>
+  </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://unpkg.com/playable@2.10.3/dist/statics/playable.bundle.min.js"></script>
     <script src="player.js"></script>
 
-    <script type="text/javascript">
+    <script>
     createPlayer({elementId: 'player'});
   </script>
 </body>
